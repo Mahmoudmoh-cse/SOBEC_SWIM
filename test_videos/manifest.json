@@ -1,0 +1,84 @@
+{
+  "purpose": "Local video fixtures for AquaIQ MediaPipe/trust-layer testing.",
+  "generated_at": "2026-05-21",
+  "fixtures": [
+    {
+      "category": "freestyle_good",
+      "file": "test_videos/freestyle_good/adam_brown_50m_freestyle_360p.webm",
+      "type": "downloaded_transcode",
+      "expected": "Successful freestyle pose detection with high confidence.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Adam_Brown_wins_50m_Freestyle_gold_at_the_2011_British_Gas_Swimming_Championships.webm",
+      "source_media": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f5/Adam_Brown_wins_50m_Freestyle_gold_at_the_2011_British_Gas_Swimming_Championships.webm/Adam_Brown_wins_50m_Freestyle_gold_at_the_2011_British_Gas_Swimming_Championships.webm.360p.webm",
+      "license": "CC BY 3.0",
+      "attribution": "BritishSwimming"
+    },
+    {
+      "category": "freestyle_low_light",
+      "file": "test_videos/freestyle_low_light/adam_brown_freestyle_low_light.mp4",
+      "type": "generated_variant",
+      "expected": "Pose should be harder to detect; confidence may drop.",
+      "derived_from": "test_videos/freestyle_good/adam_brown_50m_freestyle_360p.webm"
+    },
+    {
+      "category": "freestyle_bad_angle",
+      "file": "test_videos/freestyle_bad_angle/adam_brown_freestyle_bad_angle.mp4",
+      "type": "generated_variant",
+      "expected": "Poor framing/angle should reduce pose detection quality.",
+      "derived_from": "test_videos/freestyle_good/adam_brown_50m_freestyle_360p.webm"
+    },
+    {
+      "category": "freestyle_no_pose",
+      "file": "test_videos/freestyle_no_pose/pool_water_no_pose.mp4",
+      "type": "generated_synthetic",
+      "expected": "No pose detected fallback.",
+      "derived_from": "synthetic pool-water frames"
+    },
+    {
+      "category": "butterfly",
+      "file": "test_videos/butterfly/butterfly_stroke_from_above_360p.webm",
+      "type": "downloaded_transcode",
+      "expected": "Butterfly stroke clip; useful for stroke-specific report testing.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Butterfly_stroke_from_above.webm",
+      "source_media": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/69/Butterfly_stroke_from_above.webm/Butterfly_stroke_from_above.webm.360p.webm",
+      "license": "CC BY-SA 4.0",
+      "attribution": "It is a wonderful world"
+    },
+    {
+      "category": "breaststroke",
+      "file": "test_videos/breaststroke/andrew_willis_200m_breaststroke_360p.webm",
+      "type": "downloaded_transcode",
+      "expected": "Breaststroke race clip; useful for non-freestyle analysis paths.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andrew_Willis_breaks_English_200m_Breaststroke_record_at_the_2011_European_Short_Course_Champs.webm",
+      "source_media": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/07/Andrew_Willis_breaks_English_200m_Breaststroke_record_at_the_2011_European_Short_Course_Champs.webm/Andrew_Willis_breaks_English_200m_Breaststroke_record_at_the_2011_European_Short_Course_Champs.webm.360p.webm",
+      "license": "CC BY 3.0",
+      "attribution": "BritishSwimming"
+    },
+    {
+      "category": "underwater",
+      "file": "test_videos/underwater/butterfly_stroke_from_underwater_360p.webm",
+      "type": "downloaded_transcode",
+      "expected": "Underwater swimming view; useful for alternate camera-angle testing.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Butterfly_stroke_from_underwater.webm",
+      "source_media": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/67/Butterfly_stroke_from_underwater.webm/Butterfly_stroke_from_underwater.webm.360p.webm",
+      "license": "CC BY-SA 4.0",
+      "attribution": "It is a wonderful world"
+    },
+    {
+      "category": "crowded_pool",
+      "file": "test_videos/crowded_pool/jazz_carlin_400m_freestyle_race_360p.webm",
+      "type": "downloaded_transcode",
+      "expected": "Race environment with multiple swimmers and pool context.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jazz_Carlin_clinches_silver_in_the_400m_Freestyle_at_the_2011_British_Gas_Swimming_Championships.webm",
+      "source_media": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fc/Jazz_Carlin_clinches_silver_in_the_400m_Freestyle_at_the_2011_British_Gas_Swimming_Championships.webm/Jazz_Carlin_clinches_silver_in_the_400m_Freestyle_at_the_2011_British_Gas_Swimming_Championships.webm.360p.webm",
+      "license": "CC BY 3.0",
+      "attribution": "BritishSwimming"
+    },
+    {
+      "category": "shaky_camera",
+      "file": "test_videos/shaky_camera/adam_brown_freestyle_shaky_camera.mp4",
+      "type": "generated_variant",
+      "expected": "Pose should be usable but less stable; confidence may drop.",
+      "derived_from": "test_videos/freestyle_good/adam_brown_50m_freestyle_360p.webm"
+    }
+  ]
+}

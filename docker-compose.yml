@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aquaiq-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: aquaiq
+      POSTGRES_PASSWORD: aquaiq
+      POSTGRES_DB: aquaiq
+    ports:
+      - "5432:5432"
+    volumes:
+      - aquaiq-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aquaiq -d aquaiq"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  aquaiq-postgres-data:

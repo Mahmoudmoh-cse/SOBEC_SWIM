@@ -376,3 +376,13 @@ docker compose down
 7. Generate a training plan.
 8. Add a race analysis and mental check-in.
 9. Confirm the dashboard updates with swimmers, alerts, sessions, and active plans.
+
+
+## Contributing
+
+Use a branch-based workflow for changes:
+
+1. Create a focused feature or fix branch from `main`.
+2. Make small, meaningful commits.
+3. Open a pull request describing the change.
+4. Merge the pull request after checks pass.
